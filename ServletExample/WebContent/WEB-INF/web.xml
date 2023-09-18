@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>ServletExample</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>Insert.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
@@ -10,9 +10,9 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <context-param>
-<param-name>mysql</param-name>
-<param-value>com.mysql.jdbc.Driver</param-value>
-</context-param>
+    <param-name>mysql</param-name>
+    <param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>
   <servlet>
     <description></description>
     <display-name>Welcome</display-name>
@@ -48,17 +48,89 @@
     <display-name>Config_Context</display-name>
     <servlet-name>Config_Context</servlet-name>
     <servlet-class>com.infinite.Lob.Config_Context</servlet-class>
-  <init-param>
-<param-name>mysql</param-name>
-<param-value>com.mysql.java.Driver</param-value>
-</init-param>
-<init-param>
-<param-name>Oracle</param-name>
-<param-value>com.oracle.java.Driver</param-value>
-</init-param>
+    <init-param>
+      <param-name>mysql</param-name>
+      <param-value>com.mysql.java.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Oracle</param-name>
+      <param-value>com.oracle.java.Driver</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>Config_Context</servlet-name>
     <url-pattern>/Config_Context</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SessionExample</display-name>
+    <servlet-name>SessionExample</servlet-name>
+    <servlet-class>com.infinite.Lob.SessionExample</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionExample</servlet-name>
+    <url-pattern>/SessionExample</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HTTPSessionExample</display-name>
+    <servlet-name>HTTPSessionExample</servlet-name>
+    <servlet-class>com.infinite.Lob.HTTPSessionExample</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HTTPSessionExample</servlet-name>
+    <url-pattern>/HTTPSessionExample</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InsertFile</display-name>
+    <servlet-name>InsertFile</servlet-name>
+    <servlet-class>com.infinite.Lob.InsertFile</servlet-class>
+    <init-param>
+      <param-name>mysql</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlusername</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlpassword</param-name>
+      <param-value>mysql@123</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlurl</param-name>
+      <param-value>jdbc:mysql://localhost:3306/training</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertFile</servlet-name>
+    <url-pattern>/InsertFile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteID</display-name>
+    <servlet-name>DeleteID</servlet-name>
+    <servlet-class>com.infinite.Lob.DeleteID</servlet-class>
+     <init-param>
+      <param-name>mysql</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlusername</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlpassword</param-name>
+      <param-value>mysql@123</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlurl</param-name>
+      <param-value>jdbc:mysql://localhost:3306/training</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteID</servlet-name>
+    <url-pattern>/DeleteID</url-pattern>
   </servlet-mapping>
 </web-app>

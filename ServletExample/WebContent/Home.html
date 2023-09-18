@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>    </title>
+</head>
+<body>
+
+    <h1 >My Form</h1>
+
+<div id="container">
+
+    <div class="myForm">
+
+        <form>
+
+        <!-- name -->
+
+        <label for="name ">Name :</label><br>
+
+        <input type="text" id="name" name="name" onkeyup="validateForm" placeholder="">
+
+        <span id="error1"></span><br>
+
+        <!-- email -->
+
+        <label for="email">Email :</label><br>
+
+        <input type="text" id="email" name="email" onkeyup="validateForm" placeholder="" >
+
+        <span id="error2"></span><br>
+
+        <!-- gender -->
+
+        <label for="gender">Gender :</label><br>
+
+        <input type="radio" id="male" name="your_gender" >
+
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="your_gender">
+
+        <label for="female">Female</label><br>
+
+        <!-- password -->
+
+        <label for="pswd">password :</label><br>
+
+        <input type="password" id="pswd" name="your_pswd" placeholder=""><br>
+
+ 
+
+        <label for="npswd">confirm password :</label><br>
+
+        <input type="password" id="npswd" name="your_pswd" placeholder=""><br>
+
+        <!-- comments -->
+
+        <label for="comments">Comments :</label> <br>
+
+        <textarea  id="" cols="30" rows="5" placeholder="comments"></textarea><br>
+
+        <!--  -->
+
+        City : <select name="options">
+
+            <option value="val1">city 1</option>
+
+            <option value="val2">city 2</option>
+
+            <option value="val3">city 3</option>
+
+        </select><br>
+
+        <input type="button" value="Submit" class="change_color" onclick="validateForm(event)">
+
+    </form>
+
+    </div>
+
+</div>
+</html>
