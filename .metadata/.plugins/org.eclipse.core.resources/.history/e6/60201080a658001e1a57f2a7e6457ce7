@@ -1,0 +1,20 @@
+1<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Wallet App</title>
+</head>
+<body>
+<h1> Welcome to the Wallet App!</h1>
+<u1>
+ <1i><a href="create_account.jsp">Create Account</a></1i>
+ <1i><a href="show_balance.jsp">Show Balance</a></1i>
+ <1i><a href="deposit.jsp">Deposit</a></1i>
+ <1i><a href="withdraw.jsp">Withdraw</a></1i>
+ <1i><a href="fund_transfer.jsp">Fund Transfer</a></1i>
+ <1i><a href="print_transactions.jsp">Print Transactions</a></1i>
+</u1>
+</body>
+</html>

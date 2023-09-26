@@ -19,8 +19,6 @@
 			<br> Password:<input type="password" name="password"><br>
 			<br> <input type="submit" value="Login">
 		</form>
-	
-	
 	<button onclick="window.close()">Exit</button>
 	
 </body>

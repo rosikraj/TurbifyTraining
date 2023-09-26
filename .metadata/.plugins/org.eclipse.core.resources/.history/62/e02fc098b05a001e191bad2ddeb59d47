@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to wallet</title>
+</head>
+<frameset rows= "10%,80%,10%">
+<frame name="top" src="header.html" noresize="noresize" scrolling="no" frameborder="no">
+<frame name="main" src="button.html" noresize="noresize"  frameborder="no">
+<frame name="bottom" src="footer.html" noresize="noresize" scrolling="no" frameborder="no">
+</frameset>
+<body>
+	<button onclick="window.close()">close</button>button>
+</body>
+
+
+</html>

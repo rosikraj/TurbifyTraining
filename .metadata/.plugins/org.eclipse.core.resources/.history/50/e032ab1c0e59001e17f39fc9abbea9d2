@@ -1,0 +1,54 @@
+package com.infinite.wallet;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+//import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+/**
+ * Servlet implementation class ShowBalanceServlet
+ */
+@WebServlet("/showbalance")
+public class ShowBalanceServlet extends HttpServlet {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException , IOException{
+		
+	
+	String accountHolderName = request.getParameter("accountHolderName");
+	
+	
+	try {
+	Connection conn = DBUtil.getConnection() ;
+		
+		//Retrieve account balance 
+		
+		String sql = "SELECT balance FROM accounts WHERE account_holder_name = ?";
+		try (PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
+			preparedStatement.setString(1, accountHolderName);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			if (resultSet.next()) {
+				double balance = resultSet.getDouble("balance");
+				request.setAttribute("balance",balance);
+				request.getRequestDispatcher("show_balance.jsp").forward(request, response);
+				} else {
+					response.getWriter().println("Account not found for " + accountHolderName);
+				}
+		}
+		
+		
+	} catch (SQLException e){
+		e.printStackTrace();
+	    response.getWriter().println("Error fetching: " + e.getMessage());
+		
+	
+            }
+		}
+	}

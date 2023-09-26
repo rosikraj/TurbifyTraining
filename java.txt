@@ -1,0 +1,284 @@
+Day 3
+-----
+>>Sonar Qube: 5.5
+It is a code Quality testing tool.
+>Sonatqube is avaible in 2 flavours.
+1)Sonar cloud : https://www.sonarsource.com/solutions/clean-code/
+2)Sonar on-premises
+______
+>>>>Loops:Loop is used for repeating a task till condition fails.
+if is not comes under loop its for condition
+>we are desiging desktop applications
+>web applications work on web
+>>>>anything we write inside the while its repeats until it fails
+>>>>
+   requirement >>1a 2b 3c 4d using only while
+   requirement >> 12344321 using only while
+   requirement>> 1a 2a 3a 4a	<<<<<\
+
+
+---
+-----
+req>>>>
+1) write a java program to display pattern in below way.
+	1a 2b 3c 4d 5e . ... . .. .z26
+2)Program to display 24 table.
+3)Explore the memory size of datatypes in java.
+4)Display your mobile your using java use only (int datatype)
+5)Using do-while,display 1 to 50 in reverse order.
+				>>>>
+=====>
+loops
+>while in if block
+>id in while---yes
+>while within while---possible
+>while within do-while---possible
+>if---if==>possible
+=======>
+>>As java doesn't support pointers, there is no concept of garbage values.it wll display default value.
+>>==>>	>>..===	>>.....=<<<<
+>>>Static and 		Non static
+      !			     !
+      access to all	     not access to all
+>>Static will be loaded into memory first,
+>>no need to create object for static
+
+>>Non-static will be loaded last.We need to create object for non-static.
+>>>>....=========<<<<
+>>main is a static variable
+>>Static doesn't know about Non-static
+(ambani don't about people)---ambani is static ,people is Non static
+(people know ambani)
+>>>>>static is loaded in memory so Non-static can acess static
+>>static have keywords , non-static don't have keyboard
+-------------------------------------
+DAY4
+
+>local variables should installize
+>class variables have default value
+>java cant cosider garbage value because java dont have pointers
+>instalizing for final varible is important keep eye on it other wise it leads to error while using
+>only for class variable we need to create object
+>non static is object
+>static is avaible is memory
+>main memory is static
+>screenshort 34 add is function , int a ,int b is parameters so in order to add a and b creat a object
+>=====
+>import should be before our class
+>scanner is a pre-defined class
+>Scanner class:using scanner,we can provide input to the program to user.
+>>>>>
+Anypackage which starts with java,is predefined package.
+>
+======JVM gives instructions to os gives instruction to h/w=====
++++++++++++++++++++++++++++++++++++++
+>Screenshort 35 add(inta ,intb)>>inta is for add we are giving its value at run time(last)(function part)
+>public static void main(String[] args) {
+>int a = s,nextInt(); >> inta is for main
++++++++++++++++++++++++++++++++++++
+>>>
+>>>Prog.
+Design a program for swapping,2 table ,displaying all alphabets using functions.
+>> refer Screenshort 36 - 42
+>>>>public void swapping-is non-static (swaaping is a function)
+>>>>public static void swapping-is static (accessing it without creating an object)
+>>>>screenshot 43 we are removing satic so we need to create a object
+>>>scope = lifetime
+>>va>>>variable is outside the function and inside the class = class level
+>>>>>>>+++++>>>
+===Static is automatic like opt in mobile jvm takes responsibilites takes allocates memory===
+>>>>return; give control back to main method>>>
+>>>return some value
+>>>	IN JAVA SINGLE PROGRAM CONTAIN ONLY TWO PUBLIC CLASS NOT MORE THAN THAT
+++++++++++++++++++++++
+>>
+ArrayINdexOutOfBounds Exception
+>TO acess element in an array,we use below syntax:
+ Syntax:<datatype> variablename[size]:
+
+Draw backs of array
+>cant increase its size onces assign
+>
+=======================
+in Arrays length is a property ===========
+=======================	==================
+>>TASK 2
+>Display:"I am bad programmer I am bad programmer I am bad programmer I am bad programmer I am bad programmer I am bad programmer I am bad programmer I am bad programmer I am bad programmer I am bad programmer I am bad programmer I am bad programmer "
+(in paragragh)
+>>TASK 3
+>>Returns the index within this string of the first occurrence'
+(replace i with p)
+>>TASK 4
+TASk: Return the index within this string of the first occurence,
+o/p:
+NO of 'i' letters :6
+No of 'r' letters:
+NO of 'o' letters:
+========================================
+>>>>>>FOR:loop
+screenshot 63 and 64
+anywhere we can use for loop like in if,do while...,
+>>>>>
+How to use command Line Arguments? to assign a value after the program done
+refere screenshort  66 to 74
+>>>>
+===============================
+>>>>>SWITCH:
+>>Switch for multiple conditions checkings.]
+Switch consists 
+>>>>if we remove break in switch it will excecute to next case the output will be like these:10
+>>>System.exit(1)[abnormal terminstion]--means pls exit 1 stop execution is good 0 is bad
+refere screenshot 78
++++++++++++++++++++++++
+>>OOPs 9/7/2023 (4.17.47 *rec [5.27pm]start-
+
+>>>>>>>>>>>>
+Hi Navya, Prakruthi
+Please find Tasks accomplished for today-
+1)Attended the JAVA training session today.
+2)Learned about arrays,String,For loop,Switch statements,and executed programs regarding these topics.
+3)Introduction to OOPs
+4)Pages read from book- 4(17-20)
+Issues/Doubts : None
+
+==========================================================
+DAY5
+PACKAGE
+>>package is collection of (ANY package we hava) classes,methods,interface,acstract class,variables.
+ 2 types of packages
+>>user defined- anything we created
+>>pre-defined- Any package which is part of your jdk
+====
+====
+void-no return
+return-control back to jvm
+return34-it returns 34
+>>>>
+how to object talk through message passing
+>>
+System.out.println();
+        !     !
+        mode   method
+
+>>>new stat()--memory will be allocated by jvm
+>>unnamed block-when obj created
+=================================
+Constructors
+>>we may have return but it wont return any value but there is a way
+it is a method whose name is same as class name
+>>constructors will be within a class
+>>function name is anything but constructor name is same as class name
+>>function return value 
+>>CONSTRUCTORS ARE OF 2 TYPES
+>>1)parametrized(Screenshort -83-87)
+>>2)empty constructor
+>>3)default:if developer is not providing any constructor , then JVM will provide default 
+{stat()-empty constructor}
+>>{stat("srinivas")-parametrized
++++++++++++++++++++++
+>>USES OF OBJECT CREATION:
+1)Unnamed blocls esill be called
+2)memory allocation
+3)reference will be created
+4)class level 
+
+++++++++++++++++++++++++++++++++++++++++
+>Task1:
+create a java program  which class varaiable as int array and display the values in that array using display method.
+>========================
+>>NOTE: From JVM prospective,every program is a thread.(java visualVM)
+>>jwhistelvm,app dynamics we use in project(screenshort 88)
+>>====================================================================
+=======================================================================
+POLYMORPHISM (one thing with different use)
+OVERLOADING AND OVERIDING
+...screenshort(89)
+Rules for Method Overloading:
+==============================
+The overloaded method must change the argument list (number of parameters, data type, or sequence of parameters).
+The overloaded method can change the return type.
+The overloaded method can change the access modifier (the signature of the function should be different). 
+==========overloading occurs in same class(dwithin the class)
+>>===========================
+============
+Overriding (90-91)
+>Overridding means using same function 
+>=======================================================================================<
+ENCAPSULATON
+(hiding unneccertity details showing imp details)
+>>================================<<
+INHERITANCE
+aquring propertise from parent class
+>parent/base/super class
+>child class , derived class
+>>main job: no need to create any code we can acqure property from parent class
+>>>>>>>>>>>>>>>>>>>>>>>>>>>...................
+>..............................
+Rules for Method Overiding:
+===========================
+>he argument list should be exactly the same as that of the overridden method.
+The return type should be the same or a subtype of the return type declared in the original overridden method in the superclass.
+The access level cannot be more restrictive than the overridden method's access level. For example: If the superclass method is declared public then the overriding method in the subclass cannot be either private or protected.
+Instance methods can be overridden only if they are inherited by the subclass.
+A method declared final cannot be overridden.
+A method declared static cannot be overridden but can be re-declared.
+If a method cannot be inherited, then it cannot be overridden.
+A subclass within the same package as the instance's superclass can override any superclass method that is not declared private or final.
+A subclass in a different package can only override the non-final methods declared public or protected.
+An overriding method can throw any uncheck exceptions, regardless of whether the overridden method throws exceptions or not. However, the overriding method should not throw checked exceptions that are new or broader than the ones declared by the overridden method. The overriding method can throw narrower or fewer exceptions than the overridden method.
+Constructors cannot be overridden.
+>>>>>>>>>>>>>>>>>>..............................>.>>>>>>>>>>>>>>>>>>>>>>
+===================================================================
+=======================
+
+>>>>>>>>>>>final class can't be inhert
+>>>>>>>>>>>
++++++++++++++++ANy class which declared as final cannot ne inherited [SS 93]
+================
+INHERITANCE
+(SS 95-96)
+>>IN JAVA FOR RVERY CLASS , OBJECT IS THE BASE CLASS
+>>FOR EVERY CLASS BASE CLASSS IS OBJECT
+==============
+an object can be clone (duplicate object)
+TASK 2 sinle inheritance
+>>A class extends class
+>> there is no extends to extend
+>>an interface can exdends interface
+
+>>TASK :
+DIAMOND PROBLEM? IN JAVA
+>>TASK: DEALING WITH CONSTRUCTORS IN MULTILEVEL INHERITANCE
+(HINT: SUPER)
+>>task: 
++++++++++++++++++++++++++++++++++++++++++=========
+==================================================
+order:
+interface
+abstract class
+concrete class
+==============================================
+COLLECTIONS-storage area,srores keys..,-like amazon cart
+>>it can grow and shrink
+>>
+=======================================================
+LISTwe can add,modife objects in list
+>list is a interface .
+>we can add,modife objects in list
+>it allows duplicate
+>list is an alternative to array
+>array drawback can be covered in list
+========================================
+TREEMAP - it follows ascending order we can assume
+RED-BLACK TREE STRUCTURE
+=========================================
+Exception handling
+>any abnormal condition on program leads to errors messaging or termination of program.to deals eith ,we are going to us=================================
+
+Hi Navya, Prakruthi
+Please find Tasks accomplished for today-
+1)Attended the JAVA training session today.
+2)Learned about OOPS concepts, Collection, Exception Handling,and executed programs regarding these topics.
+3)Pages read from book- 3(21-23)
+Issues/Doubts : None
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+<style>
+    	form{
+    		background-color:white;
+    		align:center;
+    		display:block;
+    		margin:50px;	
+    		padding:20px;
+    		transform:translateX(1%);
+    	}
+    </style>
+</head>
+<body bgcolor="cyan" text="black">
+<center>
+<form method="post" action="create.jsp">
+Click here to create your account<br>
+<input type="submit" name="create" value="Create"><br><br>
+</form>
+<form method="post" action="login.jsp">
+Already a user?Login...<br>
+<input type="submit" name="login" value="Login">
+</form>
+</center>
+</body>
+</html>

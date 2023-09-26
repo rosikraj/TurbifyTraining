@@ -1,0 +1,5 @@
+package com.infinite.wallet;
+
+public class DB_Util {
+
+}

@@ -1,0 +1,97 @@
+package com.infinite.security;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+
+public class Employee_Data_Security {
+	private static final Logger logger
+
+    = Logger.getLogger(Employee_Data_Security.class); 
+	public static void main(String[] arg) {
+		FileReader fr = null;
+		Properties pr = null;
+		try {
+			
+			FileReader Fr =new FileReader("mysql.properties");
+			Properties Pr =new Properties();
+			Pr.load(Fr);
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		try {
+			Class.forName(pr.getProperty("drivername"));
+		}catch (ClassNotFoundException e){
+			e.printStackTrace();
+		Connection on = null;
+		
+		PropertyConfigurator.configure("Log4j.properties");
+	
+		
+		//Class.forName("com.mysql.jdbc.Driver"); // loading the drivers
+			try{
+				
+			
+		on =DriverManager.getConnection("jdbc:mysql://localhost:3306/training",JavaSecurity.decrypt("username","rosik"),JavaSecurity.decrypt("password","Roshiik"));//establishing connection
+			System.out.println("connetion established to database succefully");
+			Scanner sc=new Scanner(System.in);
+			PreparedStatement ps =on.prepareStatement("Insert into employee value(?,?,?,?)");//create statement
+			System.out.println("fullName");
+			ps.setString(1,sc.next());
+			System.out.println("idno");
+			ps.setInt(2,sc.nextInt());
+			
+			System.out.println("department");
+			ps.setString(3,sc.next());
+			
+			System.out.println("gender");
+			ps.setString(4,sc.next());
+			int status = ps.executeUpdate();
+			if(status == 1)
+				System.out.println("Record inserted Successfully");
+			else
+				System.out.println("Record Failed");
+			
+	         	/*while (st.next())
+	         	{
+	         		System.out.println(st.getString(1));
+	         	}*/
+		}
+		catch(SQLException e1)
+		{
+			
+			logger.error(e1);
+		}
+ 
+        catch(ClassNotFoundException e1)
+		{
+        	logger.error(e1);
+		}
+		System.out.println("connection established...");
+			
+				
+			
+			try{
+				on.close();
+				
+			}
+			catch(Exception e1)
+			{
+				e.printStackTrace();
+			}
+		}
+		}
+	}
+
+	
+	
+

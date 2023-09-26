@@ -112,7 +112,7 @@
     <display-name>DeleteID</display-name>
     <servlet-name>DeleteID</servlet-name>
     <servlet-class>com.infinite.Lob.DeleteID</servlet-class>
-     <init-param>
+    <init-param>
       <param-name>mysql</param-name>
       <param-value>com.mysql.jdbc.Driver</param-value>
     </init-param>
@@ -132,5 +132,78 @@
   <servlet-mapping>
     <servlet-name>DeleteID</servlet-name>
     <url-pattern>/DeleteID</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Insert_Data</display-name>
+    <servlet-name>Insert_Data</servlet-name>
+    <servlet-class>com.infinite.Coding2.Insert_Data</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Insert_Data</servlet-name>
+    <url-pattern>/Insert_Data</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Insert_Company_Data</display-name>
+    <servlet-name>Insert_Company_Data</servlet-name>
+    <servlet-class>com.infinte.Codes.Insert_Company_Data</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Insert_Company_Data</servlet-name>
+    <url-pattern>/Insert_Company_Data</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Right_Vote_or_Not</display-name>
+    <servlet-name>Right_Vote_or_Not</servlet-name>
+    <servlet-class>com.infinite.Coding2.Right_Vote_or_Not</servlet-class>
+     <init-param>
+      <param-name>mysql</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlusername</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlpassword</param-name>
+      <param-value>mysql@123</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlurl</param-name>
+      <param-value>jdbc:mysql://localhost:3306/training</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Right_Vote_or_Not</servlet-name>
+    <url-pattern>/Right_Vote_or_Not</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Company_Data</display-name>
+    <servlet-name>Company_Data</servlet-name>
+    <servlet-class>com.infinite.Lob.Company_Data</servlet-class>
+    <init-param>
+      <param-name>mysql</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlusername</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlpassword</param-name>
+      <param-value>mysql@123</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mysqlurl</param-name>
+      <param-value>jdbc:mysql://localhost:3306/training</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Company_Data</servlet-name>
+    <url-pattern>/Company_Data</url-pattern>
   </servlet-mapping>
 </web-app>

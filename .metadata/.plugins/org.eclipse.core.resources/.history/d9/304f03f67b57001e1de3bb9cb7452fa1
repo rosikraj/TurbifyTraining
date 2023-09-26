@@ -1,0 +1,15 @@
+package com.infinite.security;
+
+public class TestSecurity {
+	public static void main(String[] args){
+		final String secretKey = "bcd1243$";
+		String originalString = "mysql@123";
+		String encryptedString = JavaSecurity.encrypt(originalString, secretKey) ;
+		String decryptedString = JavaSecurity.decrypt(encryptedString, secretKey) ;
+		System.out.println(originalString);
+		System.out.println(encryptedString);
+		System.out.println(decryptedString);
+		
+	}
+
+}

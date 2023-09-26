@@ -1,0 +1,96 @@
+package com.infinite.security;
+
+import java.io.FileReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+
+public class Employee_Data_Security {
+	private static final Logger logger
+
+    = Logger.getLogger(Employee_Data_Security.class);
+
+	public static void main(String[] args) {
+		PropertyConfigurator.configure("log4j.properties");
+		FileReader fr = null;
+		Properties pr = null;
+		try {
+			fr = new FileReader("mysql.properties");
+			pr = new Properties();
+			pr.load(fr);
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		try{
+			Class.forName(pr>getProperty("drivername"));
+		} catch (ClassNotFoundException e){
+			e.printStackTrace();
+		}
+		
+		Connection on = null;
+		// TODO Auto-generated method stub
+		
+			
+		
+		Scanner sc=new Scanner(System.in);
+		
+		try
+		{
+			
+			
+			Class.forName(args[0000]);//Step1 loading the driver
+			on =DriverManager.getConnection("jdbc:mysql://localhost:3306/training",JavaSecurity.encrypt("username","Rosik"),JavaSecurity.encrypt("password","Rosik"));//establishing connection
+			logger.info("connetion established to database succefully");
+			PreparedStatement ps =on.prepareStatement("Insert into employee value(?,?,?,?)");//create statement
+			logger.info("fullName");
+			ps.setString(1,sc.next());
+			logger.info("idno");
+			ps.setInt(2,sc.nextInt());
+			
+			logger.info("department");
+			ps.setString(3,sc.next());
+			
+			logger.info("gender");
+			ps.setString(4,sc.next());
+			int status = ps.executeUpdate();
+			if(status == 1)
+				logger.info("Record inserted Successfully");
+			else
+				logger.info("Record Failed");
+			
+	         	/*while (st.next())
+	         	{
+	         		logger.info(st.getString(1));
+	         	}*/
+		}
+		catch(SQLException e1)
+		{
+			e1.printStackTrace();
+			logger.error(e1);
+		}
+ 
+        catch(ClassNotFoundException e)
+		{
+        	logger.error(e);
+		}
+		finally
+		{
+			try
+			{
+				
+				
+			}catch (Exception e){
+				logger.error(e);
+			}
+		}
+		
+		
+	}
+}

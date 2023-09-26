@@ -1,0 +1,76 @@
+
+Sep 14, 2023 16:17:13.12 NEW SESSION
+Sep 14, 2023 16:17:13.12 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 14, 2023 16:22:06.93 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 14, 2023 16:27:16.51 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 14, 2023 18:00:27.85 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Sep 15, 2023 10:44:31.14 NEW SESSION
+Sep 15, 2023 10:44:31.14 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 15, 2023 16:29:48.10 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 15, 2023 16:31:02.26 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 15, 2023 16:39:35.14 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Sep 18, 2023 17:15:00.48 NEW SESSION
+Sep 18, 2023 17:15:00.48 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 18, 2023 17:33:50.60 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Sep 19, 2023 11:37:18.41 NEW SESSION
+Sep 19, 2023 11:37:18.41 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 19, 2023 12:12:52.96 [8288:12996:0919/121252.969:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+Sep 19, 2023 19:27:57.73 NEW SESSION
+Sep 19, 2023 19:27:57.73 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 19, 2023 19:37:09.14 [16764:12248:0919/193709.146:ERROR:device_event_log_impl.cc(222)] [19:37:09.145] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+
+Sep 20, 2023 21:04:56.92 NEW SESSION
+Sep 20, 2023 21:04:56.92 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Sep 21, 2023 19:39:49.66 NEW SESSION
+Sep 21, 2023 19:39:49.66 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 21, 2023 19:47:14.11 [11796:4052:0921/194714.119:ERROR:device_event_log_impl.cc(222)] [19:47:14.118] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+
+Sep 21, 2023 23:13:31.54 NEW SESSION
+Sep 21, 2023 23:13:31.55 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 21, 2023 23:14:13.98 [15248:13616:0921/231413.979:ERROR:device_event_log_impl.cc(222)] [23:14:13.979] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+
+Sep 22, 2023 09:41:46.48 NEW SESSION
+Sep 22, 2023 09:41:46.48 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Sep 22, 2023 18:14:48.20 NEW SESSION
+Sep 22, 2023 18:14:48.20 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 22, 2023 18:17:53.30 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 22, 2023 18:19:28.33 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Sep 24, 2023 10:11:53.96 NEW SESSION
+Sep 24, 2023 10:11:53.96 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 10:26:59.53 [7488:15452:0924/102659.534:ERROR:device_event_log_impl.cc(222)] [10:26:59.545] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Sep 24, 2023 13:02:16.45 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:16:11.32 [1100:6152:0924/131611.328:ERROR:device_event_log_impl.cc(222)] [13:16:11.328] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Sep 24, 2023 13:17:46.11 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:35:34.63 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:36:52.92 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:38:03.10 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:38:53.60 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:39:46.94 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:40:59.34 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:44:06.82 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:44:24.71 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 13:45:08.07 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Sep 24, 2023 16:35:29.23 NEW SESSION
+Sep 24, 2023 16:35:29.23 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 16:36:18.77 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 16:47:57.27 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 17:07:44.33 [14908:3840:0924/170744.337:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+Sep 24, 2023 17:07:47.85 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 17:09:15.65 [14908:3840:0924/170915.657:ERROR:device_event_log_impl.cc(222)] [17:09:15.656] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Sep 24, 2023 17:20:19.01 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 19:08:03.33 [5696:14264:0924/190803.330:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+Sep 24, 2023 19:08:07.16 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 19:22:59.64 [5696:14264:0924/192259.646:ERROR:device_event_log_impl.cc(222)] [19:22:59.646] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Sep 24, 2023 19:53:04.36 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 24, 2023 20:34:52.78 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Sep 25, 2023 01:56:10.28 NEW SESSION
+Sep 25, 2023 01:56:10.28 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
