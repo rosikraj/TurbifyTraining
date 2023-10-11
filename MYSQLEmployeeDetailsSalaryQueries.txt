@@ -1,0 +1,98 @@
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 104
+Server version: 8.0.34 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use training;
+Database changed
+mysql> create table EmployeeDetails (EmpId int NOT NULL PRIMARY KEY,FULLName char(50),Managerid int,DateOfJoining date,city varchar(50));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table EmployeeSalary (EmpId INT NOT NULL,project varchar(250) NOT NULL,Salary DECIMAL(10, 2) NOT NULL,Variable DECIMAL(10, 2),PRIMARY KEY (EmpId, project),FOREIGN KEY (EmpID) REFERENCES EmployeeDetails(EmpId));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO EmployeeDetails (EmpId, FULLName, Managerid, DateOfJoining, city)
+    -> VALUES (121, 'John Snow', 321, '2019-01-31', 'Toronto'),
+    -> (321, 'Walter White', 986, '2020-01-30', 'California'),
+    -> (421, 'Kuldeep Rana', 876, '2021-11-27', 'New Delhi');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO EmployeeSalary (EmpId, project, Salary, Variable)
+    -> VALUES (121, 'P1', 8000.00, 500.00),
+    -> (321, 'P2', 10000.00, 1000.00),
+    -> (421, 'P1', 12000.00, 0.00);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT ed.EmpId, ed.FULLName
+    -> FROM EmployeeDetails ed
+    -> ;
++-------+--------------+
+| EmpId | FULLName     |
++-------+--------------+
+|   121 | John Snow    |
+|   321 | Walter White |
+|   421 | Kuldeep Rana |
++-------+--------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT EmpId,FULLName
+    -> FROM EMployeeDetails
+    -> WHERE Managerid =986;
++-------+--------------+
+| EmpId | FULLName     |
++-------+--------------+
+|   321 | Walter White |
++-------+--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DISTINCT(Project)
+    -> FROM EmployeeSalary;
++---------+
+| Project |
++---------+
+| P1      |
+| P2      |
++---------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT MAX(SALARY),
+    -> Min(Salary),
+    -> AVG(Salary)
+    -> FROM EmployeeSalary;
++-------------+-------------+--------------+
+| MAX(SALARY) | Min(Salary) | AVG(Salary)  |
++-------------+-------------+--------------+
+|    12000.00 |     8000.00 | 10000.000000 |
++-------------+-------------+--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT EmpId, Salary
+    -> FROM EmployeeSalary
+    -> WHERE Salary BETWEEN 9000 AND 15000;
++-------+----------+
+| EmpId | Salary   |
++-------+----------+
+|   321 | 10000.00 |
+|   421 | 12000.00 |
++-------+----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT Empid, city,ManagerId
+    -> FROM EmployeeDetails
+    -> WHERE city='Toronto' AND Managerid='321';
++-------+---------+-----------+
+| Empid | city    | ManagerId |
++-------+---------+-----------+
+|   121 | Toronto |       321 |
++-------+---------+-----------+
+1 row in set (0.00 sec)

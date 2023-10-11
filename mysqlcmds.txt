@@ -1,0 +1,302 @@
+		password (mysql@***)
+		create table mobiletab (mobilename char(50),mobileno bigint);>>to create a table
+		show tables;
+		use training;(database we need)
+		show fields from mobiletab;(it shows fields and type of data)
+		show create table mobiletab;(it shows byte code of what we write)
+		select * from employee;(not prefered)
+		or
+		select mobilename,mobileno from mobiletab;(select column,column from table;)
+		
+		desc table employee;
+ 		select @@SYSTEM_TIME_ZONE;(for os time zone)
+		create table student(name char(30),id integer);
+		insert into employee value('Srinivas',890,'Software');
+		>if we insert(0000000001)>it will  cosider it as 1
++-------------+------------+
+| manufacture | mobileno   |
++-------------+------------+
+| apple       | 9876543210 |
+| realme      | 7893117147 |
+| samsung     |          9 |
++-------------+------------+
+		to know your table name in database = SHOW TABLES;(it shows tables names)
+		to add a new coloumn in table is = ALTER TABLE table_name
+						   ADD column_name data_type; [not to prefer to alter the data]
+		to add value in new coloumn is =  UPDATE table_name
+    						->  SET column_name = 'updated-value'
+    						-> WHERE idno(already excited value) = 109(assigned value in table);
+		system cls;(to clear all in the screen,for 5.5 it is not work because it is not there)
+		>select mobilename as manufacture,mobileno from mobiletab;(to hide a actual column name we use (as) it is like a NICKNAME to show us(we are using select it will not change in the db it just show us)
++-------------+------------+
+| manufacture | mobileno   |
++-------------+------------+
+| apple       | 9876543210 |
+| realme      | 7893117147 |
+| samsung     |          9 |
++-------------+------------+
+		>select count(*) as recordcount from mobiletab;
++-------------+
+| recordcount |
++-------------+
+|           3 |
++-------------+
+		> alter table mobiletab rename mobileshop;(to change the table name)
+		>truncate table mobileshop;(removing records from table (values))
+		>drop table mobileshop;(to delete a table)
+		> update training.employee1 set department = 'Turbify' where name ='Rosik';(to change the row value)
+		>delete from employee1 where name ='arun';(to delete a complete row)
+
+mysql> select name,department,designation from employee1;
++---------+------------+-------------+
+| name    | department | designation |
++---------+------------+-------------+
+| Rosik   | Turbify    | QE          |
+| chawan  | ASE        | DA          |
+| pradeep | ASE        | Dev         |
++---------+------------+-------------+
+////////////////////////////////////////////////////
+>mysql> create user rosik;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> select host,user from mysql.user;
++-----------+------------------+
+| host      | user             |
++-----------+------------------+
+| %         | rosik            |
+| localhost | mysql.infoschema |
+| localhost | mysql.session    |
+| localhost | mysql.sys        |
+| localhost | root             |
++-----------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> drop user rosik;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> select host,user from mysql.user;
++-----------+------------------+
+| host      | user             |
++-----------+------------------+
+| localhost | mysql.infoschema |
+| localhost | mysql.session    |
+| localhost | mysql.sys        |
+| localhost | root             |
++-----------+------------------+
+>>if check constraint is used only above 5.5 versions
+
+>mysql> create table infinite(name char(50),salary integer NOT NULL CHECK(salary >0));
+
+mysql> insert into infinite value('rosik',0);
+ERROR 3819 (HY000): Check constraint 'infinite_chk_1' is violated.
+mysql> insert into infinite value('rosik',1);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select name,salary from infinite;
++-------+--------+
+| name  | salary |
++-------+--------+
+| rosik |      1 |
++-------+--------+
+1 row in set (0.00 sec)
+///////////////////////////////////////
+
+
+to recover the deleted data
+>>In databases , we will have 2 types of bins
+>recycle bin and purgebin(auto deleted after some days)
+>ONLY ROW CAN RESTORE the data , no columns will restore
+>
+=======================
+> to know date:
+ create table dtable(cdat date,location char(50) default 'telangana');
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into dtable(cdat) values(curdate());
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select cdat,location from dtable;
++------------+-----------+
+| cdat       | location  |
++------------+-----------+
+| 2023-09-21 | telangana |
++------------+-----------+
+>to know date we use
+mysql> select day(curdate());
++----------------+
+| day(curdate()) |
++----------------+
+|             21 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select dayofmonth(curdate());
++-----------------------+
+| dayofmonth(curdate()) |
++-----------------------+
+|                    21 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select dayofyear(curdate());
++----------------------+
+| dayofyear(curdate()) |
++----------------------+
+|                  264 |
++----------------------+
+1 row in set (0.00 sec)
+/////////////////////////////////////////////
+
+9/22/2023
+>>
+To control the database connection [setAutoCommit(true);]
+>>it is a mehod in jdbc.if autocommit is false,until we issue autocommiit
+true ,till that time data will not be persisted in db.thats the reason this method
+is used for transactions.
+>
+/////
+AUTO COMMIT FOR ROLLBACK;
+
+mysql> set autocommit=false;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert into infinite1 values('yyr',55994);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select name,salary from infinite1;
++--------+--------+
+| name   | salary |
++--------+--------+
+| rosik  |   NULL |
+| raj    |    999 |
+| null   |    999 |
+| raj    |    499 |
+| rrr    |    599 |
+| r5r    |    599 |
+| rr555r |   5599 |
+| yyr    |  55994 |
++--------+--------+
+8 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> select name,salary from infinite1;
++--------+--------+
+| name   | salary |
++--------+--------+
+| rosik  |   NULL |
+| raj    |    999 |
+| null   |    999 |
+| raj    |    499 |
+| rrr    |    599 |
+| r5r    |    599 |
+| rr555r |   5599 |
++--------+--------+
+7 rows in set (0.00 sec)
+
+mysql> set autocommit=true;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert into infinite1 values('yyr',55994);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select name,salary from infinite1;
++--------+--------+
+| name   | salary |
++--------+--------+
+| rosik  |   NULL |
+| raj    |    999 |
+| null   |    999 |
+| raj    |    499 |
+| rrr    |    599 |
+| r5r    |    599 |
+| rr555r |   5599 |
+| yyr    |  55994 |
++--------+--------+
+8 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select name,salary from infinite1;
++--------+--------+
+| name   | salary |
++--------+--------+
+| rosik  |   NULL |
+| raj    |    999 |
+| null   |    999 |
+| raj    |    499 |
+| rrr    |    599 |
+| r5r    |    599 |
+| rr555r |   5599 |
+| yyr    |  55994 |
++--------+--------+
+8 rows in set (0.00 sec)
+>>>.
+/////
+>ROLE BACK IS FOR RECORDS IN A TABLE BUT NOT DB OBJECTS/TABLE
+>DB OBJECTS( TAble,view,sequence,trigger,index,stored,proccedures...,
+//////////////////////
+	INSERTING DATA INTO A TABLE USING SELECT APPROACH
+>
+
+									//////////////////////////////////////
+///////////////////////
+
+
+Task1: can i rollback a dropped table from database?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+every row is a record in database 
+table is also called as entity
+////
+1)Write a program to insert data to below table.
+Tablename: Company
+Fields: companyname,address,country,No_of_employees,status(active/in-active)
+
+ 
+
+2)Write a program to check whether the person has right to vote, if yes insert his details to db. After successful insertion, page should redirect to a details.jsp page and shld display "Details updatesd successfully with current date".
+Also create database table accordingly.
+Technologies: index.jsp should be welcome page.
+jdbc
+servlets
+has context menu
