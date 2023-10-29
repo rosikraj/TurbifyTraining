@@ -1,0 +1,27 @@
+# Service registers under this name
+# Control the InternalResourceViewResolver:
+spring:
+  application:
+    name: accounts-web
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+ 
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ICS-LT-J6L96V3:1111/eureka/
+
+ 
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled:  false
+# HTTP Server (Tomcat) Port
+server: 
+  port: 7777
