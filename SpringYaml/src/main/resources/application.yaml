@@ -1,0 +1,10 @@
+---
+# --- it indecated sessions
+server:
+ port: 6666
+ 
+ #profiles
+--- 
+spring:
+ profiles:
+  active: prod
