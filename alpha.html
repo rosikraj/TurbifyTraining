@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE html>: This declares that you're using HTML5. -->
+<html>
+<!-- <html>: This is the opening tag that marks the beginning of an HTML document. -->
+<head>
+<!-- The <head> in HTML is like the hidden backstage where you put important information and instructions for your website,
+ but it's not visible to the people who visit your site; they only see what's on the front stage in the <body>. -->
+ <!-- In the `<head>` of an HTML document, you can include information and instructions such as:
+
+1. **Title**: The title of your webpage that appears in the browser's title bar or tab.
+   
+2. **Character Encoding**: The encoding that defines how text is displayed, like `UTF-8`.
+ (Unicode Transformation Format)
+  UTF-8 is a way for computers to read and show all kinds of letters and symbols from 
+different languages and smiley faces too! It's like a magic code for text.
+
+3. **Meta Description**: A brief description of your webpage for search engines and social media sharing.
+
+4. **Viewport**: Information about how your webpage should appear on different devices.
+  width=device-width: This tells the webpage to adjust its width to fit the device's screen.
+ So, it doesn't get too wide or too narrow.
+
+  initial-scale=1: This means the webpage should appear at its original size when it's first loaded. 
+It's like saying, "Show the webpage as it was designed without zooming in or out."
+
+5. **Link Stylesheets**: Connections to external CSS files for controlling the webpage's appearance.
+"Hey, go grab the 'styles.css' file,
+<link>: Think of this as a bridge that connects your webpage (HTML) to a style file (CSS).
+
+rel="stylesheet": This tells the browser that the linked file is a stylesheet, which contains rules for how your webpage should look.
+
+type="text/css": It confirms that the linked file is written in a language understood by web browsers, and that language is CSS.
+
+href="styles.css": Here, you provide the name of the stylesheet file (in this case, "styles.css") 
+that the browser should use to style your webpage.
+
+6. **Favicons**: Small icons for browser tabs.
+
+7. **JavaScript**: References to JavaScript files for enhanced functionality.
+code is used to include external JavaScript files into your HTML document. Here's why we use it:
+
+These elements are not visible to users on the webpage but are crucial for improving how your website is presented in search results, 
+ensuring it looks good on various devices, and controlling its functionality and appearance. -->
+<meta charset="UTF-8">
+<meta name="description" content="A website about cooking delicious meals">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="demo.css">
+<link rel="icon" type="image" href="C:\Users\Rosik\Pictures\luffy.png">
+<script src="script.js"></script>
+<title>Joy Boy</title>
+</head>
+<body>
+<!-- Text: You can add text to your webpage to provide information, headings, paragraphs, and more. For example: -->
+<h1>Monkey D. Luffy</h1>
+<p>I'll become the King of the Pirates!</p>
+<!-- Images: You can display images on your webpage to make it more visually appealing: -->
+<img src="C:\Users\Rosik\Pictures\crew.jpeg" alt="straw hat pirates">
+<!--  Links: Create hyperlinks to navigate to other web pages or resources: -->
+<a href="https://aniwatch.ph/one-piece-episode-1081-english-subbed/">Click here to see him </a>
+<!-- Lists: Build lists to organize content, like bullet-point lists or numbered lists:
+Unordered lists are for when the order doesn't matter (like a list of items)..
+
+Ordered List (<ol>): This type of list is used for items that have a specific order or sequence. 
+Ordered lists are for when the order matters (like steps to follow). -->
+<ul>
+    <li>English</li>
+    <li>Japanese</li>
+</ul>
+<h2>Crew members first 4:</h2>
+<ol>
+    <li>Zoro </li>
+    <li>Nami</li>
+	<li>Usopp</li>
+	<li>Sanji</li>
+</ol>
+<!-- Forms: Design forms for user input, such as text fields, checkboxes, and buttons: -->
+<form>
+    <!-- Text Input (<input type="text">): This is used for single-line text input, like a username or a search query. -->
+	<label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+<!-- Password Input (<input type="password">): This hides the characters entered, typically used for password input. -->
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+
+<!-- Textarea (<textarea>): This allows multi-line text input, useful for longer messages or comments. -->
+
+<label for="comments">Comments:</label>
+<textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+<br>
+
+<!-- Checkbox (<input type="checkbox">): Checkboxes allow users to select multiple options from a list.
+The <label for="option1"> element is used to create a label for the form input element.
+The <input type="checkbox"> element creates a checkbox input.
+The id="option1" attribute of the input element is used to associate the label with the input element, ensuring that clicking on the label toggles the checkbox.
+The name="options[]" attribute is used to specify the name of the input element within the form. The value="Option 1" attribute sets the value of the checkbox.
+So, with this code, you have a checkbox input labeled "Option 1" on the same line. When a user clicks on the text "Option 1" or the checkbox itself, 
+it will toggle the checkbox's state (checked or unchecked). -->
+
+<label for="option1">Option 1</label>
+<input type="checkbox" id="option1" name="options[]" value="Option 1">
+
+<label for="option2">Option 2</label>
+<input type="checkbox" id="option2" name="options[]" value="Option 2"> 
+<br>
+
+<!--  Radio Button (<input type="radio">): Radio buttons are used when users can select only one option from a list.-->
+
+<label for="male">Male</label>
+<input type="radio" id="male" name="gender" value="Male">
+
+<label for "female">Female</label>
+<input type="radio" id="female" name="gender" value="Female">
+
+<!-- Select Dropdown (<select>): This creates a dropdown menu with options for the user to choose from. -->
+
+<label for="country">Country:</label>
+<select id="country" name="country">
+    <option value="wc">Wano Country</option>
+    <option value="tl">Totto Land</option>
+    <option value="F-Mi">Fish-Man Island </option>
+</select>
+<br>
+
+<!-- File Upload (<input type="file">): Users can upload files, such as images or documents. -->
+
+<label for="file">Upload File:</label>
+<input type="file" id="file" name="file">
+<br>
+
+<!-- Submit Button (`<input type="submit">): This button is used to submit the form to a server for processing. -->
+<input type="submit" value="Submit">
+
+<!-- Reset Button (`<input type="reset">): This button is used to reset the form to its initial state -->
+<input type="reset" value="Reset">
+<br>
+
+<!--  Number Input (`<input type="number">): Users can input numeric values with optional minimum and maximum restrictions.-->
+<label for="quantity">Quantity:</label>
+<input type="number" id="quantity" name="quantity" min="1" max="10">
+<br>
+
+<!-- Email Input (`<input type="email">): This is designed for email addresses and may provide email-specific input validation. -->
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+<br>
+
+<!-- URL Input (`<input type="url">): This is designed for URLs and may provide URL validation. -->
+<label for="website">Website URL:</label>
+<input type="url" id="website" name="website">
+<br>
+
+<!--  Date Input (`<input type="date">): Allows users to input a date. Browsers often provide a date picker for easy selection.-->
+<label for="birthdate">Birthdate:</label>
+<input type="date" id="birthdate" name="birthdate">
+<br>
+
+<!-- Time Input (`<input type="time">): Lets users input a time (e.g., for setting appointments). -->
+<label for="appointment-time">Appointment Time:</label>
+<input type="time" id="appointment-time" name="appointment-time">
+<input type="time" id="Endtime" name="End-time">
+<br>
+
+<!-- Color Input (`<input type="color">): Allows users to pick a color using a color picker. -->
+<label for="favorite-color">Favorite Color:</label>
+<input type="color" id="favorite-color" name="favorite-color">
+<br>
+
+
+<!-- Range Input (`<input type="range">): Creates a slider control for selecting a value within a specified range.-->
+<label for="volume">Volume:</label>
+<input type="range" id="volume" name="volume" min="0" max="100">
+<br>
+
+<!--Search Input (`<input type="search">): Designed for search boxes and may include special styling. -->
+<label for="search-query">Search:</label>
+<input type="search" id="search-query" name="search-query">
+<br>
+
+<!-- Tel Input (`<input type="tel">): Intended for telephone numbers and may provide telephone-specific input validation. -->
+<label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="phone">
+<br>
+
+<!-- Month Input (`<input type="month">): Allows users to select a month and year. -->
+<label for="expiry-date">Date of birth:</label>
+<input type="date" id="expiry-date" name="expiry-date">
+<label for="vacation-week">Vacation Week:</label>
+<input type="week" id="vacation-week" name="vacation-week">
+<br>
+<label for="meeting-datetime">Meeting Date and Time:</label>
+<input type="datetime-local" id="meeting-datetime" name="meeting-datetime">
+horse.mp3 audio/mpeg
+
+
+<br>
+</form>
+
+<!-- Multimedia: Embed audio and video elements for media content: -->
+<audio controls autoplay>
+    <source src="C:\Users\Rosik\Music\1minkerintha.mp3" type="audio/mpeg">
+</audio>
+<br>
+<video controls>
+    <source src="C:\Users\Rosik\Videos\Cocaine Bear (2023) 720p HDRip x264 DD5.1 - 850MB ESub.mkv" type="video/mp4">
+</video>
+<br>
+
+<!--  every table has a header <thead> and body  <tbody> and footer   <tfoot> 
+ <tr> stands for "table row." The <tr> element is used to define a row within an HTML table 
+ th=table Header Cells (<th>) :Header cells are used to define column and row headers in a table. 
+Data Cells (<td>)): Data cells hold the actual content or data of the table -->
+
+<table border="1"> 
+        <caption>Crew </caption>
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Department</th>
+				<th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+             <tr bgcolor="lightblue">
+                <td>001</td>
+                <td>zoro</td>
+                <td>swordsman</td>
+				<td><img src="C:\Users\Rosik\Pictures\zoro.jpeg" alt="Zoro Photo"></td>
+				
+            </tr>
+             <tr bgcolor="lightpink">
+                <td>002</td>
+                <td>nami</td>
+                <td>navigator</td>
+				<td><img src="C:\Users\Rosik\Pictures\nami.jpeg" alt="Nami Photo"></td>
+            </tr>
+            <tr bgcolor="lightgreen">
+                <td>003</td>
+                <td>usopp</td>
+                <td>snipper</td>
+				<td><img src="C:\Users\Rosik\Pictures\usopp.jpeg" alt="Usoop Photo"></td>
+            </tr>
+			 <tr bgcolor="lightblue">
+                <td>004</td>
+                <td>sanji</td>
+                <td>cook</td>
+					<td><a href ="zoro.html"><img src="C:\Users\Rosik\Pictures\sanji.jpeg" alt="Sanji Photo"></a></td>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Crew members:</td>
+                <td>4</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+   
+</body>
+</html>

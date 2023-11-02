@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3498db; /*  color to blue */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            min-height: 100vh; /* content take up the full viewport height */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: 0 10px;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="email"] {
+            width: 93.3%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="password"] {
+            width: 94%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        .google-button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .google-button img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .facebook-button {
+            background-color: #002D54;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .facebook-button img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .signup-link {
+            text-align: center;
+        }
+
+        .divider {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .divider-line {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .divider-line::before, .divider-line::after {
+            content: "";
+            flex: 1;
+            border-top: 1px solid #ccc;
+        }
+
+        .divider-line::before {
+            margin-right: 10px;
+        }
+
+        .divider-line::after {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" required placeholder="Password">
+                </div>
+				<center>
+                <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+				</center>
+                <div class="form-group">
+                    <input type="submit" value="Login" onclick="validateForm()">
+                </div>
+                <p class="signup-link"><a href="#">Don't have an account? Signup</a></p>
+            </form>
+            <div class="divider-line">Or</div>
+            <br>
+            <div class="facebook-button" onclick="redirectToInfinite()">
+                <img src="C:\Users\karnatir\Downloads\facebook.png" alt="Facebook Logo">
+                Login with Facebook
+            </div>
+			<br>
+            <div class="google-button" onclick "redirectToGoogle()">
+                <img src="C:\Users\karnatir\Downloads\google.png" alt="Google Logo">
+                Login with Google
+            </div>
+        </div>
+        <div class="form-container">
+            <h2>Signup</h2>
+            <form action="#">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" required placeholder="Create password">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm password">
+                </div>
+                <div class "form-group">
+                    <input type="submit" value="Signup" onclick="validateForm()">
+                </div>
+                <p class="signup-link"><a href="#">Already have an account? Login</a></p>
+            </form>
+            <div class="divider-line">Or</div>
+            <br>
+            <div class="facebook-button" onclick="redirectToInfinite()">
+                <img src="C:\Users\karnatir\Downloads\facebook.png" alt="Facebook Logo">
+                Signup with Facebook
+            </div>
+			<br>
+            <div class="google-button" onclick="redirectToGoogle()">
+                <img src="C:\Users\karnatir\Downloads\google.png" alt="Google Logo">
+                Signup with Google
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToInfinite() {
+            window.location.href = "https://www.infinite.com";
+        }
+
+        function redirectToGoogle() {
+            window.location.href = "https://www.google.com";
+        }
+
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
+
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 8 characters and contain at least one letter and one number.");
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+            }
+        }
+    </script>
+</body>
+</html>
