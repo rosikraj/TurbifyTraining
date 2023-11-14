@@ -1,0 +1,102 @@
+import React from "react";
+import './Registration.css';
+ 
+class Pharmacy extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            fields: {},
+            errors: {}
+        }
+        this.handleChange = this.handleChange.bind(this);
+        this.submituserRegistrationForm = this.submituserRegistrationForm.bind(this);
+    };
+    handleChange(e) {
+        let fields = this.state.fields;
+        fields[e.target.name] = e.target.value;
+        this.setState({
+            fields
+        });
+    }
+    submituserRegistrationForm(e) {
+        e.preventDefault();
+        if (this.validateForm()) {
+            alert("form submitted successfullly");
+        }
+ 
+    }
+    validateForm() {
+        let fields = this.state.fields;
+        let fvalid = true;
+        let errors = {};
+        if (fields["name"] == '') {
+            fvalid = false;
+            errors["name"] = "*username cannot be empty";
+        }
+        if (fields["name"].length < 3) {
+            fvalid = false;
+            errors["name"] = "*username length";
+        }
+        if (!fields["name"]) {
+            fvalid = false;
+            errors["name"] = "*username cannot be empty";
+        }
+       
+        if (!fields["phno"]) {
+            fvalid = false;
+            errors["phno"] = "*Please enter your mobile no.";
+        }
+        if (!fields["address"]) {
+            fvalid = false;
+            errors["address"] = "*Please enter your address.";
+        }
+        if (!fields["uid"]) {
+            fvalid = false;
+            errors["uid"] = "*Please enter your ID.";
+        }
+        if (!fields["pass1"]) {
+            fvalid = false;
+            errors["pass1"] = "*Please enter your Password.";
+        }
+        if (!fields["pass2"]) {
+            fvalid = false;
+            errors["pass2"] = "*enter your Re-type Password.";
+        }
+        this.setState({
+            errors: errors
+        });
+        return fvalid;
+    }
+    render() {
+        return (
+            <div class="container">
+                <div class="registerbox" >
+                    <form method="post" name="userRegistrationForm" onSubmit={this.submituserRegistrationForm}>
+                    <h2>Register New Vendor</h2>
+                        <label></label>
+                        <input type="text" name="name" value={this.state.fields.name} onChange={this.handleChange} placeholder="Enter Name"/>
+                        <span className="errorMsg">{this.state.errors.name}</span>
+                        <label></label>
+                        <input type="text" name="phno" value={this.state.fields.phno} onChange={this.handleChange} placeholder="Enter Phone Number"/>
+                        <span className="errorMsg">{this.state.errors.phno}</span>
+                        <label></label>
+                        <input type="text" name="address" value={this.state.fields.address} onChange={this.handleChange} placeholder="Enter Address"/>
+                        <span className="errorMsg">{this.state.errors.address}</span>
+                        <label></label>
+                        <input type="text" name="uid" value={this.state.fields.uid} onChange={this.handleChange} placeholder="Enter Vendor ID"/>
+                        <span className="errorMsg">{this.state.errors.uid}</span>
+                        <input type="password" name="pass1" value={this.state.fields.pass1} onChange={this.handleChange} placeholder="Enter Password"/>
+                        <span className="errorMsg">{this.state.errors.pass1}</span>
+                        <input type="password" name="pass2" value={this.state.fields.pass2} onChange={this.handleChange} placeholder="Retype Password"/>
+                        <span className="errorMsg">{this.state.errors.pass2}</span>
+                        <input type="submit" className="button" value="Register" />
+                    </form>
+ 
+                </div>
+            </div>
+ 
+        );
+    }
+}
+ 
+export default Pharmacy;
